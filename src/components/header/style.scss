@@ -1,0 +1,15 @@
+@import '../../style/variable';
+header{
+	background:$primary-bg-color !important;
+	color:$primary-color !important;
+}
+.guest_login {
+	margin-left: 10px;
+	font-size: 1.3rem;
+	font-weight: 500;
+	vertical-align: middle;
+}
+.guest {
+	width: 64px;
+	vertical-align: middle;
+}

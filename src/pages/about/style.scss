@@ -1,0 +1,30 @@
+@import '../../style/variable';
+.about {
+	min-height: 100%;
+	width: 100%;
+	position: relative;
+	text-align: center;
+}
+.logo-container {
+	text-align: center;
+	padding-top: 50px;
+	img {
+		width: 150px;
+	}
+}
+h3 {
+	font-weight: 400;
+  font-size: 1.3rem;
+}
+p {
+	font-weight: 200;
+	padding: 10px 20px;
+}
+.footer {
+	position: fixed;
+  right: 0;
+  left: 0;
+  bottom: 20px;
+  font-size: 0.8rem;
+  font-weight: 300;
+}

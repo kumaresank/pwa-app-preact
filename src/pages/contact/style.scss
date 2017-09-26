@@ -1,0 +1,44 @@
+@import '../../style/variable';
+.contact {
+	min-height: 100%;
+	width: 100%;
+	position: relative;
+}
+.form-fields {
+	background: #FFF;
+	margin: 10px 20px;
+}
+textarea,select {
+	width: 100%;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 400;
+	color:rgba(19, 21, 53, 0.61);
+	&:focus {
+		outline: none;
+	}
+}
+textarea {
+	height: 100px;
+	font-size: 0.9rem;
+	padding: 10px;
+}
+select {
+		font-size: 1rem;
+		padding: 5px;
+}
+.footer {
+	position: fixed;
+	bottom:0;
+	width: 100%;
+	max-width: 1024px;
+	button {
+		background: #8bb75b;
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: 600;
+    height: 50px;
+    border-radius: 0;
+    font-family: 'Oswald', sans-serif;
+    text-transform: capitalize;
+	}
+}

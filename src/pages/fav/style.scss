@@ -1,0 +1,41 @@
+@import '../../style/variable';
+.fav {
+	min-height: 100%;
+	width: 100%;
+	position: relative;
+}
+.footer {
+	position: fixed;
+	bottom:0;
+	width: 100%;
+	max-width: 1024px;
+	button {
+		background: #8bb75b;
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: 600;
+    height: 60px;
+    border-radius: 0;
+    font-family: 'Oswald', sans-serif;
+    text-transform: capitalize;
+		div:first-child {
+			display: inline-flex;
+			float: left;
+			line-height: 25px;
+			&:after {
+				content:'Deliver charges may apply*';
+				font-size: 0.5rem;
+				position: absolute;
+				top:30px;
+				left: 20px;
+			}
+		}
+		div:nth-child(2) {
+			display: inline-flex;
+			float: right;
+		}
+	}
+}
+.clear-fix {
+	clear: both;
+}

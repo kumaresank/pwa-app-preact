@@ -1,0 +1,36 @@
+{
+  "name": "pwa-web-app",
+  "version": "1.0.0",
+  "description": "Tabletop Menu Progress Web Application using Preact",
+  "main": "index.js",
+  "scripts": {
+    "test": "eslint src && preact test",
+    "start": "if-env NODE_ENV=production && npm run -s serve || npm run -s dev",
+    "build": "preact build",
+    "serve": "preact build && preact serve",
+    "dev": "preact watch"
+  },
+  "keywords": ["preact","react","pwa","web app"],
+  "author": "Kumaresan K <tkkumaresan@gmail.com> (https://bitbucket.org/kumaresan_k)",
+  "license": "ISC",
+  "eslintConfig": {
+    "extends": "eslint-config-synacor"
+  },
+  "repository":{
+    "url":"https://kumaresan_k@bitbucket.org/amitrotenga/web-app-react-2017.git"
+  },
+  "devDependencies": {
+    "eslint": "^4.6.1",
+    "eslint-config-synacor": "^1.1.1",
+    "if-env": "^1.0.0",
+    "node-sass": "^4.5.3",
+    "preact-cli": "^1.4.1",
+    "preact-material-components": "^1.1.6",
+    "sass-loader": "^6.0.6"
+  },
+  "dependencies": {
+    "preact": "^8.2.5",
+    "preact-compat": "^3.17.0",
+    "preact-router": "^2.5.7"
+  }
+}

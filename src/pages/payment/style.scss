@@ -1,0 +1,46 @@
+@import '../../style/variable';
+.payment {
+	min-height: 100%;
+	width: 100%;
+	position: relative;
+}
+.footer {
+	position: fixed;
+	bottom:0;
+	width: 100%;
+	max-width: 1024px;
+	button {
+		background: #8bb75b;
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: 600;
+    height: 50px;
+    border-radius: 0;
+    font-family: 'Oswald', sans-serif;
+    text-transform: capitalize;
+	}
+}
+.saved-cards {
+	margin: 5px 10px;
+	background: #FFF;
+	h3 {
+		margin: 10px 0 0 20px;
+    font-size: 1.2rem;
+    font-weight: 300;
+	}
+	.saved-card {
+	color:$primary-color;
+	font-weight: 200;
+	padding: 5px;
+	border-radius: 2px;
+	img {
+		float: right;
+		width: 40px;
+		margin-top: 8px;
+		margin-right: 15px;
+	}
+	.mdc-radio {
+		vertical-align: -13px;
+	}
+	}
+}

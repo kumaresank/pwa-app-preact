@@ -1,0 +1,67 @@
+@import '../../style/variable';
+.card {
+	position: relative;
+	background: #FFF;
+	margin: 5px 10px;
+	padding: 5px 5px 5px 10px;
+	border-radius: 2px;
+}
+.card_title {
+	font-weight: 300;
+	&:after{
+	content: " ";
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	display: table-cell;
+	width: 35px;
+	border-bottom-color: $secondary-color;
+}
+}
+.card_description {
+	font-size: 13px;
+	font-weight: 200;
+	padding: 4px 0;
+	border-bottom: 1px solid rgba(19, 21, 53, 0.08);
+}
+.card_footer {
+	font-size: 20px;
+	font-weight: 300;
+}
+.right_icons {
+	display: inline-block;
+	position: absolute;
+	right: 15px;
+	i{
+		font-size: 20px;
+	}
+	i:first-child {
+		color: rgba(19, 21, 53, 0.26);
+		margin-right:10px;
+	}
+	i:nth-child(2) {
+		color: rgba(215, 90, 74, 0.26);
+	}
+}
+.cart_icons {
+	display: inline-block;
+	position: absolute;
+	right: 15px;
+	i{
+		font-size: 24px;
+		vertical-align: -4px;
+	}
+	i:first-child {
+		color: rgba(215, 90, 74, 1);
+		margin-right:10px;
+	}
+	span {
+		font-size:15px;
+		font-weight: 200;
+		vertical-align: 3px;
+		vertical-align: 2px;
+	}
+	i:nth-child(3) {
+		color: #4CAF50;
+		margin-left:10px;
+	}
+}
