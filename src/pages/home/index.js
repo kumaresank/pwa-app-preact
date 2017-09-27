@@ -29,7 +29,7 @@ export default class Home extends Component {
             </Tabs.TabBarScroller>
           </div>
           <FoodItem title='Boom Boom Burger (Medium)' desc='House made Meat loaf, Mild Cheddar, Fried Onion Strings' price='2.99' />
-          <div className='footer'>
+          <div className='home-footer'>
             <Button ripple raised onClick={() => { location.href = '/cart' }}><div align-start>1 Item | $2.99</div><div align-end>View Order</div><div className='clear-fix' /></Button>
           </div>
         </div>

@@ -15,7 +15,7 @@ export default class Fav extends Component {
           <FoodItem title='Boom Boom Burger (Medium)' desc='House made Meat loaf, Mild Cheddar, Fried Onion Strings' price='2.99' />
           <FoodItem title='Boom Boom Burger (Medium)' desc='House made Meat loaf, Mild Cheddar, Fried Onion Strings' price='2.99' />
           <FoodItem title='Boom Boom Burger (Medium)' desc='House made Meat loaf, Mild Cheddar, Fried Onion Strings' price='2.99' />
-          <div className='footer'>
+          <div className='fav-footer'>
             <Button ripple raised><div align-start>1 Item | $2.99</div><div align-end>View Order</div><div className='clear-fix' /></Button>
           </div>
         </div>

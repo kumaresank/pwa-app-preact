@@ -55,7 +55,7 @@ export default class Cart extends Component {
               <div className='grand-price'>$5.17</div>
             </div>
           </div>
-          <div className='footer'>
+          <div className='cartpage-footer'>
             <Button ripple raised onClick={() => { location.href = '/payment' }}>Proceed to pay</Button>
           </div>
         </div>

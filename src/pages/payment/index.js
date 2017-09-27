@@ -49,7 +49,7 @@ export default class Payment extends Component {
             <div className='clear-fix' />
           </div>
           <div className='add_card'><Icon>add</Icon> Add new card</div>
-          <div className='footer'>
+          <div className='payment-footer'>
             <Button onClick={() => { location.href = '/payment-success' }} ripple raised>Pay</Button>
           </div>
         </div>

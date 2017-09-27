@@ -22,7 +22,7 @@ export default class Contact extends Component {
           <div className='form-fields'>
             <textarea placeholder='Type your message here' />
           </div>
-          <div className='footer'>
+          <div className='contact-footer'>
             <Button ripple raised>Send</Button>
           </div>
         </div>
