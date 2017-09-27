@@ -1,9 +1,10 @@
 import { h, Component } from 'preact'
-import {Radio, Button} from 'preact-material-components'
+import {Radio, Button, Icon, Form} from 'preact-material-components'
 import 'preact-material-components/Radio/style.css'
 import 'preact-material-components/Button/style.css'
 
 import Header from './../../components/header'
+import Address from './../../components/address'
 import style from './style'
 import add from './../../assets/images/add.svg'
 import visa from './../../assets/images/visa.png'
@@ -17,16 +18,39 @@ export default class Payment extends Component {
       <div>
         <Header title='EASYPIE' />
         <div className='payment'>
+          <div className='cart-item'>
+            <div className='item-count'>1 Item</div>
+            <div className='item-price'>$2.99</div>
+          </div>
+          <div className='card'>
+            <div className='destination'>
+              <div className='delivery'><Radio id='delivery' name='destination' checked /><label for='delivery'>Delivery</label></div>
+              <div className='pickup'><Radio id='pickup' name='destination' /><label for='pickup'>Pickup</label></div>
+            </div>
+            <div>
+              <div className='card_title'><Radio id='home' name='address' checked /><label for='home'>Home</label></div>
+              <div className='card_name'>Nitesh Pathak</div>
+              <div className='card_description'>1201 washaington st, Braintree, Boston, MA 01289</div>
+              <div className='card_description'>(615)-324-4235</div>
+            </div>
+            <div>
+              <div className='card_title'><Radio id='work' name='address' /><label for='work'>Work</label></div>
+              <div className='card_name'>Nitesh Pathak</div>
+              <div className='card_description'>1201 washaington st, Braintree, Boston, MA 01289</div>
+              <div className='card_description'>(615)-324-4235</div>
+            </div>
+          </div>
           <div className='saved-cards'>
             <h3>Payment Details</h3>
-            <div className='saved-card'><Radio name='card' />XXXX XXXX XXXX 3456<img src={visa} /></div>
-            <div className='saved-card'><Radio name='card' />XXXX XXXX XXXX 3456<img src={master} /></div>
-            <div className='saved-card'><Radio name='card' />XXXX XXXX XXXX 3456<img src={discover} /></div>
-            <div className='saved-card'><Radio name='card' />XXXX XXXX XXXX 3456<img src={american} /></div>
+            <div className='saved-card'><Radio id='visa' name='card' /><label for='visa'>XXXX XXXX XXXX 3456<img src={visa} /></label></div>
+            <div className='saved-card'><Radio id='master' name='card' /><label for='master'>XXXX XXXX XXXX 3456<img src={master} /></label></div>
+            <div className='saved-card'><Radio id='discover' name='card' /><label for='discover'>XXXX XXXX XXXX 3456<img src={discover} /></label></div>
+            <div className='saved-card'><Radio id='american' name='card' /><label for='american'>XXXX XXXX XXXX 3456<img src={american} /></label></div>
             <div className='clear-fix' />
           </div>
+          <div className='add_card'><Icon>add</Icon> Add new card</div>
           <div className='footer'>
-            <Button ripple raised>Pay</Button>
+            <Button onClick={() => { location.href = '/payment-success' }} ripple raised>Pay</Button>
           </div>
         </div>
       </div>

@@ -27,7 +27,9 @@ export default class Header extends Component {
         </Toolbar>
         <Drawer.TemporaryDrawer ref={drawer => { this.drawer = drawer }} >
           <Drawer.TemporaryDrawerHeader className='mdc-theme--primary-bg'>
-            <img class={style.guest} src={guest} /> <span class={style.guest_login}>LOGIN</span>
+            <a class={style.login_link} href='/profile'>
+              <img class={style.guest} src={guest} /> <span class={style.guest_login}>LOGIN</span>
+            </a>
           </Drawer.TemporaryDrawerHeader>
           <Drawer.TemporaryDrawerContent>
             <List>

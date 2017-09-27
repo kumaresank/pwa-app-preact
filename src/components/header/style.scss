@@ -13,3 +13,8 @@ header{
 	width: 64px;
 	vertical-align: middle;
 }
+.login_link {
+	text-decoration: none;
+	color:$primary-color;
+	cursor: pointer;
+}

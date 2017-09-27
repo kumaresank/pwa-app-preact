@@ -1,6 +1,7 @@
 import { h, Component } from 'preact'
-import Tabs from 'preact-material-components/Tabs'
+import {Button, Tabs} from 'preact-material-components'
 import 'preact-material-components/Tabs/style.css'
+import 'preact-material-components/Button/style.css'
 
 import Header from './../../components/header'
 import FoodItem from './../../components/food-item'
@@ -28,6 +29,9 @@ export default class Home extends Component {
             </Tabs.TabBarScroller>
           </div>
           <FoodItem title='Boom Boom Burger (Medium)' desc='House made Meat loaf, Mild Cheddar, Fried Onion Strings' price='2.99' />
+          <div className='footer'>
+            <Button ripple raised onClick={() => { location.href = '/cart' }}><div align-start>1 Item | $2.99</div><div align-end>View Order</div><div className='clear-fix' /></Button>
+          </div>
         </div>
       </div>
     )

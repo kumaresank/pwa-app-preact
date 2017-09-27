@@ -29,7 +29,7 @@ export default class App extends Component {
 					<Contact path="/contact-us/" />
 					<About path="/about-us/" />
 					<Fav path="/my-favs/" />
-					<PaymentSuccess path="/order-placed/" />
+					<PaymentSuccess path="/payment-success/" />
 					<Cart path="/cart/" />
 					<Payment path="/payment/" />
 				</Router>

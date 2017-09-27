@@ -56,7 +56,7 @@ export default class Cart extends Component {
             </div>
           </div>
           <div className='footer'>
-            <Button ripple raised>Proceed to pay</Button>
+            <Button ripple raised onClick={() => { location.href = '/payment' }}>Proceed to pay</Button>
           </div>
         </div>
       </div>
