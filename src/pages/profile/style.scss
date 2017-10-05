@@ -214,3 +214,10 @@ img {
 		text-align: right;
 	}
 }
+
+.mdc-textfield--upgraded:not(.mdc-textfield--fullwidth):not(.mdc-textfield--box):not(.mdc-textfield--multiline) {
+	width: 100%;
+}
+.mdc-textfield__label {
+	color:$primary-color;
+}

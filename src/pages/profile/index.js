@@ -1,7 +1,9 @@
 import { h, Component } from 'preact'
-import {Icon, Tabs, Switch} from 'preact-material-components'
+import {Icon, Tabs, Switch, Dialog,Textfield} from 'preact-material-components'
 import 'preact-material-components/Tabs/style.css'
 import 'preact-material-components/Switch/style.css'
+import 'preact-material-components/Dialog/style.css'
+import 'preact-material-components/Textfield/style.css';
 
 import Header from './../../components/header'
 import Address from './../../components/address'
@@ -21,7 +23,35 @@ state = { activeTab: 0 }
       body = <div>
         <Address type='Home' name='Nitesh Pathak' address='1201 washaington st, Braintree, Boston, MA 01289' mobile='(615)-324-4235' />
         <Address type='Work' name='Nitesh Pathak' address='1201 washaington st, Braintree, Boston, MA 01289' mobile='(615)-324-4235' />
-        <div className='add_address'><Icon>add</Icon> Add new address</div>
+        <div className='add_address' onClick={() => { this.addressDlg.MDComponent.show() }}><Icon>add</Icon> Add new address</div>
+        <div>
+          <Dialog ref={addressDlg => { this.addressDlg = addressDlg }}>
+            <Dialog.Header>Add Address</Dialog.Header>
+            <Dialog.Body>
+              <div>
+                <Textfield label="Name"/>
+              </div>
+              <div>
+              <Textfield label="Address line 1"/>
+              </div>
+              <div>
+              <Textfield label="Address line 2"/>
+              </div>
+              <div>
+              <Textfield label="City"/>
+              </div>
+              <div>
+              <Textfield label="State"/>
+              </div>
+              <div>
+              <Textfield label="Zip code"/>
+              </div>
+              <div>
+              <Textfield label="Phone number"/>
+              </div>
+            </Dialog.Body>
+          </Dialog>
+        </div>
       </div>
     } else if (activeTab === 1) {
       body = <div>

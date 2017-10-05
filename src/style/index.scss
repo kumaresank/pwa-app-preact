@@ -73,6 +73,43 @@ html, body {
 	}
 }
 
+.mdc-button--raised:not(:disabled), .mdc-button--unelevated:not(:disabled){
+	background-color: #8bb75b !important;
+}
+
 .mdc-tab-bar__indicator {
 	background: $secondary-color !important;
+}
+
+.mdc-dialog__header {
+	text-align: center;
+	background: #f2f3f7 !important;
+	padding: 0px 24px 0 !important;
+	.mdc-dialog__header__title {
+		font-family: 'Oswald', sans-serif !important;
+		line-height: 4rem !important;
+	}
+}
+
+.mdc-dialog__body {
+	font-family: 'Oswald', sans-serif !important;
+	color:#131535 !important;
+	p {
+		font-family: 'Oswald', sans-serif !important;
+		color:#131535;
+		font-weight: 300;
+	}
+	text-align: center;
+	button {
+		border-radius: 4px;
+  	background-color: #2f73c2 !important;
+		color: #FFF !important;
+		text-transform: capitalize;
+		font-family: 'Oswald', sans-serif !important;
+		width: 240px;
+		font-weight: 300;
+	}
+	.google button {
+		background-color: #e65555 !important;
+	}
 }

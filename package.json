@@ -10,14 +10,19 @@
     "serve": "preact build && preact serve",
     "dev": "preact watch"
   },
-  "keywords": ["preact","react","pwa","web app"],
+  "keywords": [
+    "preact",
+    "react",
+    "pwa",
+    "web app"
+  ],
   "author": "Kumaresan K <tkkumaresan@gmail.com> (https://bitbucket.org/kumaresan_k)",
   "license": "ISC",
   "eslintConfig": {
     "extends": "eslint-config-synacor"
   },
-  "repository":{
-    "url":"https://kumaresan_k@bitbucket.org/amitrotenga/web-app-react-2017.git"
+  "repository": {
+    "url": "https://kumaresan_k@bitbucket.org/amitrotenga/web-app-react-2017.git"
   },
   "devDependencies": {
     "eslint": "^4.6.1",
@@ -25,7 +30,7 @@
     "if-env": "^1.0.0",
     "node-sass": "^4.5.3",
     "preact-cli": "^1.4.1",
-    "preact-material-components": "^1.1.6",
+    "preact-material-components": "^1.2.0",
     "sass-loader": "^6.0.6"
   },
   "dependencies": {

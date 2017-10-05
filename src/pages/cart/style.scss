@@ -181,3 +181,24 @@
 		}
 }
 }
+.mdc-dialog__body {
+	padding: 0 24px 10px;
+}
+.mdc-dialog__footer {
+		text-align: center;
+		display: inline-block;
+		button {
+			border-radius: 4px;
+			color: #FFF !important;
+			text-transform: capitalize;
+			font-family: 'Oswald', sans-serif !important;
+			font-weight: 300;
+			&:first-child {
+				background-color: #c54b4b;
+			}
+			&:nth-child(2) {
+				margin-left: 40px;
+				background-color:#8bb65b;
+			}
+		}
+}

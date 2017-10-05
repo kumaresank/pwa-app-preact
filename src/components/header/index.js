@@ -1,8 +1,10 @@
 import { h, Component } from 'preact'
-import { Toolbar, Icon, Drawer, List } from 'preact-material-components'
+import { Toolbar, Icon, Drawer, List, Dialog, Button } from 'preact-material-components'
 import 'preact-material-components/Toolbar/style.css'
 import 'preact-material-components/Drawer/style.css'
 import 'preact-material-components/List/style.css'
+import 'preact-material-components/Dialog/style.css'
+import 'preact-material-components/Button/style.css'
 
 import style from './style'
 import guest from './../../assets/images/guest.svg'
@@ -27,7 +29,7 @@ export default class Header extends Component {
         </Toolbar>
         <Drawer.TemporaryDrawer ref={drawer => { this.drawer = drawer }} >
           <Drawer.TemporaryDrawerHeader className='mdc-theme--primary-bg'>
-            <a class={style.login_link} href='/profile'>
+            <a class={style.login_link} onClick={() => { this.loginDlg.MDComponent.show() }}>
               <img class={style.guest} src={guest} /> <span class={style.guest_login}>LOGIN</span>
             </a>
           </Drawer.TemporaryDrawerHeader>
@@ -48,6 +50,16 @@ export default class Header extends Component {
             </List>
           </Drawer.TemporaryDrawerContent>
         </Drawer.TemporaryDrawer>
+        <div>
+          <Dialog ref={loginDlg => { this.loginDlg = loginDlg }}>
+            <Dialog.Header>Sign In</Dialog.Header>
+            <Dialog.Body>
+              <p className='facebook'><Button>Sign in with Facebook</Button></p>
+              <p>OR</p>
+              <p className='google'><Button>Sign in with Google</Button></p>
+            </Dialog.Body>
+          </Dialog>
+        </div>
       </header>
     )
   }
