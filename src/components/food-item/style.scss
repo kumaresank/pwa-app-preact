@@ -65,3 +65,43 @@
 		margin-left:10px;
 	}
 }
+.sizes {
+	h3{
+	text-align: left;
+	&:after{
+	content: " ";
+	border-bottom-style: solid;
+	border-bottom-width: 2px;
+	display: table-cell;
+	width: 20px;
+	border-bottom-color: $secondary-color;
+}
+}
+}
+.sizes_list,.ingredients_list {
+	text-align: left;
+	margin-left: -10px;
+	div {
+		vertical-align: middle;
+	}
+	label {
+		vertical-align: middle;
+	}
+	span {
+		margin-top: 5px;
+		float: right;
+	}
+}
+.ingredients {
+	h3{
+	text-align: left;
+	&:after{
+	content: " ";
+	border-bottom-style: solid;
+	border-bottom-width: 2px;
+	display: table-cell;
+	width: 20px;
+	border-bottom-color: $secondary-color;
+}
+}
+}

@@ -1,5 +1,5 @@
 import { h, Component } from 'preact'
-import {Icon, Tabs, Switch, Dialog,Textfield} from 'preact-material-components'
+import {Icon, Tabs, Switch, Dialog, Textfield} from 'preact-material-components'
 import 'preact-material-components/Tabs/style.css'
 import 'preact-material-components/Switch/style.css'
 import 'preact-material-components/Dialog/style.css'
@@ -114,7 +114,7 @@ state = { activeTab: 0 }
             <div className='order-total'>Total</div>
             <div className='order-price'>$2.99</div>
           </div>
-        </div>        
+        </div>
         <div className='clear-fix' />
       </div>
     } else if (activeTab === 3) {

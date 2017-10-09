@@ -54,9 +54,9 @@ export default class Header extends Component {
           <Dialog ref={loginDlg => { this.loginDlg = loginDlg }}>
             <Dialog.Header>Sign In</Dialog.Header>
             <Dialog.Body>
-              <p className='facebook'><Button>Sign in with Facebook</Button></p>
+              <p className='facebook'><Button onClick={() => { location.href = '/profile' }}>Sign in with Facebook</Button></p>
               <p>OR</p>
-              <p className='google'><Button>Sign in with Google</Button></p>
+              <p className='google'><Button onClick={() => { location.href = '/profile' }}>Sign in with Google</Button></p>
             </Dialog.Body>
           </Dialog>
         </div>

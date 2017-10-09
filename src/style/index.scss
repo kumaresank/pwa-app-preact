@@ -72,7 +72,6 @@ html, body {
     border-bottom-color: #f5f5f5;
 	}
 }
-
 .mdc-button--raised:not(:disabled), .mdc-button--unelevated:not(:disabled){
 	background-color: #8bb75b !important;
 }
@@ -111,5 +110,65 @@ html, body {
 	}
 	.google button {
 		background-color: #e65555 !important;
+	}
+}
+
+.home {
+	.mdc-dialog__body {
+		padding: 0 10px 24px;
+		margin-top: 0;
+	}
+	.mdc-radio {
+		width:35px;
+		height:35px;
+		&:before {
+			background-color: rgba(139, 182, 92, 0.14);
+		}
+		&:after {
+			background-color: rgba(139, 182, 92, 0.14);
+		}
+	}
+	.mdc-checkbox {
+		width:15px;
+		height: 15px;
+			&:before {
+				background-color: rgba(139, 182, 92, 0.14);
+			}
+			&:after {
+				background-color: rgba(139, 182, 92, 0.14);
+			}
+		}
+		.mdc-radio__background::before,.mdc-radio__native-control:checked,.mdc-radio__background .mdc-radio__inner-circle {
+			background: #8bb75b !important;
+		}
+		.mdc-radio__native-control:checked, .mdc-radio__background .mdc-radio__outer-circle {
+			border-color: #8bb75b !important;
+		}
+		.mdc-checkbox__checkmark,.mdc-checkbox__checkmark__path {
+			background: #8bb75b !important;
+		}
+		.mdc-checkbox__background {
+			border-color: #8bb75b !important;
+		}
+		.mdc-dialog__footer{
+		padding: 0;
+		button {
+			background: #8bb75b;
+	    width: 100%;
+	    font-size: 1.2rem;
+	    font-weight: 400;
+	    height: 60px;
+	    border-radius: 0;
+	    font-family: 'Oswald', sans-serif;
+	    text-transform: capitalize;
+			div:first-child {
+				display: inline-flex;
+				float: left;
+			}
+			div:nth-child(2) {
+				display: inline-flex;
+				float: right;
+			}
+		}
 	}
 }
