@@ -119,8 +119,6 @@ html, body {
 		margin-top: 0;
 	}
 	.mdc-radio {
-		width:35px;
-		height:35px;
 		&:before {
 			background-color: rgba(139, 182, 92, 0.14);
 		}
@@ -129,8 +127,6 @@ html, body {
 		}
 	}
 	.mdc-checkbox {
-		width:15px;
-		height: 15px;
 			&:before {
 				background-color: rgba(139, 182, 92, 0.14);
 			}
