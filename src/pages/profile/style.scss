@@ -68,6 +68,12 @@ i {
 .mdc-switch__native-control:checked ~ .mdc-switch__background .mdc-switch__knob {
 	background: #8bb75b;
 }
+.mdc-textfield--focused.mdc-textfield--upgraded:not(.mdc-textfield--fullwidth):not(.mdc-textfield--multiline):not(.mdc-textfield--box)::after {
+	background: #8bb75b;
+}
+.mdc-textfield--focused .mdc-textfield__label {
+	color:#8bb75b;
+}
 .notification-card,.order-history {
 background: #FFF;
 color:$primary-color;
@@ -220,4 +226,22 @@ img {
 }
 .mdc-textfield__label {
 	color:$primary-color;
+}
+
+.mdc-dialog__body {
+		margin-top: 0;
+}
+
+.mdc-dialog__footer{
+padding: 0;
+button {
+	background: #8bb75b;
+	width: 100%;
+	font-size: 1.2rem;
+	font-weight: 400;
+	height: 60px;
+	border-radius: 0;
+	font-family: 'Oswald', sans-serif;
+	text-transform: capitalize;
+}
 }

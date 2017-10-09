@@ -1,7 +1,9 @@
 import { h, Component } from 'preact'
-import {Radio, Button, Icon, Form} from 'preact-material-components'
+import {Radio, Button, Icon, Dialog, Textfield} from 'preact-material-components'
 import 'preact-material-components/Radio/style.css'
 import 'preact-material-components/Button/style.css'
+import 'preact-material-components/Dialog/style.css'
+import 'preact-material-components/Textfield/style.css'
 
 import Header from './../../components/header'
 import Address from './../../components/address'
@@ -48,10 +50,34 @@ export default class Payment extends Component {
             <div className='saved-card'><Radio id='american' name='card' /><label for='american'>XXXX XXXX XXXX 3456<img src={american} /></label></div>
             <div className='clear-fix' />
           </div>
-          <div className='add_card'><Icon>add</Icon> Add new card</div>
+          <div className='add_card' onClick={() => { this.addCardDlg.MDComponent.show() }}><Icon>add</Icon> Add new card</div>
           <div className='payment-footer'>
             <Button onClick={() => { location.href = '/payment-success' }} ripple raised>Pay</Button>
           </div>
+        </div>
+        <div>
+          <Dialog ref={addCardDlg => { this.addCardDlg = addCardDlg }}>
+            <Dialog.Header>Add new card</Dialog.Header>
+            <Dialog.Body>
+              <div>
+                <Textfield label='Card number' />
+              </div>
+              <div className='rows'>
+                <div className='col-6'>
+                  <Textfield label='Valid to - mm/yy' />
+                </div>
+                <div className='col-6'>
+                  <Textfield label='CVV' />
+                </div>
+              </div>
+              <div>
+                <Textfield label='Name on card' />
+              </div>
+            </Dialog.Body>
+            <Dialog.Footer>
+              <Button ripple raised>Pay</Button>
+            </Dialog.Footer>
+          </Dialog>
         </div>
       </div>
     )

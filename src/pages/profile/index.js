@@ -1,9 +1,10 @@
 import { h, Component } from 'preact'
-import {Icon, Tabs, Switch, Dialog, Textfield} from 'preact-material-components'
+import {Icon, Tabs, Switch, Dialog, Textfield, Button} from 'preact-material-components'
 import 'preact-material-components/Tabs/style.css'
 import 'preact-material-components/Switch/style.css'
 import 'preact-material-components/Dialog/style.css'
-import 'preact-material-components/Textfield/style.css';
+import 'preact-material-components/Textfield/style.css'
+import 'preact-material-components/Button/style.css'
 
 import Header from './../../components/header'
 import Address from './../../components/address'
@@ -50,6 +51,9 @@ state = { activeTab: 0 }
               <Textfield label="Phone number"/>
               </div>
             </Dialog.Body>
+            <Dialog.Footer>
+              <Button ripple raised>Save</Button>
+            </Dialog.Footer>
           </Dialog>
         </div>
       </div>
@@ -137,12 +141,14 @@ state = { activeTab: 0 }
             <div className='city'>Braintree, MA</div>
           </div>
           <div className='profile-tab'>
+          <Tabs.TabBarScroller>
             <Tabs scroller>
               <Tabs.Tab active onClick={() => { this.setState({activeTab: 0}) }}>Address</Tabs.Tab>
               <Tabs.Tab onClick={() => { this.setState({activeTab: 1}) }}>Saved cards</Tabs.Tab>
               <Tabs.Tab onClick={() => { this.setState({activeTab: 2}) }}>Order History</Tabs.Tab>
               <Tabs.Tab onClick={() => { this.setState({activeTab: 3}) }}>Notification</Tabs.Tab>
             </Tabs>
+            </Tabs.TabBarScroller>
           </div>
           {body}
         </div>
