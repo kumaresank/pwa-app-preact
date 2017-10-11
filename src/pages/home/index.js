@@ -14,7 +14,7 @@ export default class Home extends Component {
       <div>
         <Header title='EASYPIE' fav='true' />
         <div className='home'>
-          <img className='group_img' src={burger} />
+          <div className='group_img_container'><img className='group_img' src={burger} /></div>
           <div className='tab-container'>
             <Tabs.TabBarScroller>
               <Tabs scroller>
