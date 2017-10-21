@@ -1,5 +1,4 @@
 import { h, Component } from 'preact'
-import Icon from 'preact-material-components/Icon'
 import style from './style'
 
 export default class Address extends Component {

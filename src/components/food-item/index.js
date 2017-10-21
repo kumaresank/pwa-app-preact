@@ -1,9 +1,11 @@
 import { h, Component } from 'preact'
 import {Icon, Dialog, Radio, Checkbox, Button} from 'preact-material-components'
+import 'preact-material-components/Icon/style.css'
 import 'preact-material-components/Dialog/style.css'
 import 'preact-material-components/Radio/style.css'
 import 'preact-material-components/Checkbox/style.css'
 import 'preact-material-components/Button/style.css'
+
 import style from './style'
 
 export default class FoodItem extends Component {

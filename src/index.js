@@ -1,4 +1,4 @@
-import './style';
-import App from './routes';
+import './style'
+import App from './routes'
 
-export default App;
+export default App

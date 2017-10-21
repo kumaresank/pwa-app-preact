@@ -1,6 +1,7 @@
 import { h, Component } from 'preact'
 import { Toolbar, Icon, Drawer, List, Dialog } from 'preact-material-components'
 import 'preact-material-components/Toolbar/style.css'
+import 'preact-material-components/Icon/style.css'
 import 'preact-material-components/Drawer/style.css'
 import 'preact-material-components/List/style.css'
 import 'preact-material-components/Dialog/style.css'

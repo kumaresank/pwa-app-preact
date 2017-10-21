@@ -1,7 +1,8 @@
 import { h, Component } from 'preact'
 import {Button, Icon, Dialog} from 'preact-material-components'
-import 'preact-material-components/Dialog/style.css'
 import 'preact-material-components/Button/style.css'
+import 'preact-material-components/Icon/style.css'
+import 'preact-material-components/Dialog/style.css'
 
 import Header from './../../components/header'
 import style from './style'

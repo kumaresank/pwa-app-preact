@@ -5,7 +5,6 @@ import 'preact-material-components/Button/style.css'
 import Header from './../../components/header'
 import FoodItem from './../../components/food-item'
 import style from './style'
-import burger from './../../assets/images/burger-medium.png'
 
 import { getFoodGroupData,getFoodItemData } from './../../lib/api'
 
