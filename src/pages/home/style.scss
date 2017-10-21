@@ -5,6 +5,9 @@
 	position: relative;
 	padding-bottom: 60px;
 }
+::-webkit-scrollbar {
+    display: none;
+}
 .group_img {
 	width: 100%;
 }

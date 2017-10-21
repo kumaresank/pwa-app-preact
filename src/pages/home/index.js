@@ -9,7 +9,7 @@ import style from './style'
 import { getFoodGroupData,getFoodItemData } from './../../lib/api'
 
 export default class Home extends Component {
-  state = {active:0,groups:[],item:{foodItemList:[]}}
+  state = {active:0,groups:[],items:{foodItemList:[]}}
 
   getFoodData() {
     getFoodGroupData().then((groups) => {
@@ -19,8 +19,8 @@ export default class Home extends Component {
   }
 
   getItemData(id) {
-    getFoodItemData(id).then((item) => {
-      this.setState({ item });
+    getFoodItemData(id).then((items) => {
+      this.setState({ items });
     });
   }
 
@@ -28,7 +28,7 @@ export default class Home extends Component {
     this.getFoodData();
   }
 
-  render ({}, { groups,item,active }) {
+  render ({}, { groups,items,active }) {
     return (
       <div>
         <Header title='EASYPIE' fav='true' />
@@ -40,9 +40,9 @@ export default class Home extends Component {
                 ))}
           </ul>
           </div>
-          { item.foodItemList.map((item, index) => (
-          <FoodItem title={item.name+' (Large)'} desc='Cottage cheese in a jacket of mash potato, served with lettuce, tomatoes, chopped onions, mayo and crisps' price={
-            item.price.map((p, index) => (p.size === 'L'?p.price:''))} sizes={item.price} ingredients={item.ingredients}/>
+          { items.foodItemList.map((item, index) => (
+          <FoodItem title={item.name+' (L)'} desc='Cottage cheese in a jacket of mash potato, served with lettuce, tomatoes, chopped onions, mayo and crisps' price={
+            item.price.map((p, index) => (p.size === 'L'?p.price:''))} sizes={item.price} ingredients={item.ingredients} customs={items.customGroupList}/>
           ))}
           <div className='home-footer'>
             <Button ripple raised onClick={() => { location.href = '/cart' }}><div align-start>1 Item | $2.99</div><div align-end>View Order</div><div className='clear-fix' /></Button>

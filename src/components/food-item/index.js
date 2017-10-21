@@ -42,7 +42,14 @@ export default class FoodItem extends Component {
               <div class={style.ingredients}>
                 <h3>Ingredients</h3>
                 {this.props.ingredients.map((i, index) => (
-                  <div class={style.ingredients_list}><Checkbox id={i.name} ref={cb => { this.cb = cb }} /><label for={i.name}>{i.name}</label></div>
+                  <div class={style.ingredients_list}><Checkbox id={i.name} ref={cb => { this.cb = cb }} checked /><label for={i.name}>{i.name}</label></div>
+                ))}
+                <div class={style.clear_fix} />
+              </div>
+              <div class={style.ingredients}>
+                <h3>Customization</h3>
+                {this.props.customs.map((c, index) => (
+                  <div class={style.ingredients_list}><Checkbox id={c.name} ref={cb => { this.cb = cb }} /><label for={c.name}>{c.name}<span>{c.price}</span></label></div>
                 ))}
                 <div class={style.clear_fix} />
               </div>
