@@ -1,6 +1,5 @@
 import { h, Component } from 'preact'
-import {Icon, Tabs, Switch, Dialog, Textfield, Button} from 'preact-material-components'
-import 'preact-material-components/Icon/style.css'
+import {Tabs, Switch, Icon, Dialog, Textfield, Button} from 'preact-material-components'
 import 'preact-material-components/Tabs/style.css'
 import 'preact-material-components/Switch/style.css'
 import 'preact-material-components/Dialog/style.css'

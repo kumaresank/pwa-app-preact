@@ -4,6 +4,9 @@
 	width: 100%;
 	position: relative;
 }
+#app {
+	height: 100%;
+}
 .cartpage-footer {
 	position: fixed;
 	bottom:0;
@@ -145,7 +148,7 @@
 }
 .charges{
 	position: absolute;
-	top: 400px;
+	top: 390px;
 	width: 100%;
 .delivery {
 		font-size: 1.1rem;
