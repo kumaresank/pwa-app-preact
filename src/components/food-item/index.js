@@ -34,17 +34,16 @@ export default class FoodItem extends Component {
             <Dialog.Body>
               <div class={style.sizes}>
                 <h3>Size</h3>
-                <div class={style.sizes_list}><Radio id='small' name='size' /><label for='small'>Small<span>$ 0.50</span></label></div>
-                <div class={style.sizes_list}><Radio id='medium' name='size' /><label for='medium'>Medium<span>$ 0.60</span></label></div>
-                <div class={style.sizes_list}><Radio id='large' name='size' /><label for='large'>Large<span>$ 0.70</span></label></div>
+                {this.props.sizes.map((p, index) => (
+                  <div class={style.sizes_list}><Radio id={p.size} name='size' /><label for={p.size}>{p.size}<span>$ {p.price}</span></label></div>
+                ))}
                 <div class={style.clear_fix} />
               </div>
               <div class={style.ingredients}>
                 <h3>Ingredients</h3>
-                <div class={style.ingredients_list}><Checkbox id='chicken' ref={cb => { this.cb = cb }} /><label for='chicken'>Chicken<span>$ 0.70</span></label></div>
-                <div class={style.ingredients_list}><Checkbox id='cheese' ref={cb => { this.cb = cb }} /><label for='cheese'>Cheese<span>$ 0.30</span></label></div>
-                <div class={style.ingredients_list}><Checkbox id='lettuce' ref={cb => { this.cb = cb }} /><label for='lettuce'>Lettuce<span>$ 0.20</span></label></div>
-                <div class={style.ingredients_list}><Checkbox id='mayonese' ref={cb => { this.cb = cb }} /><label for='mayonese'>Mayonese<span>$ 0.10</span></label></div>
+                {this.props.ingredients.map((i, index) => (
+                  <div class={style.ingredients_list}><Checkbox id={i.name} ref={cb => { this.cb = cb }} /><label for={i.name}>{i.name}</label></div>
+                ))}
                 <div class={style.clear_fix} />
               </div>
             </Dialog.Body>

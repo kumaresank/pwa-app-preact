@@ -22,6 +22,39 @@ ul {
     text-align: center;
     padding: 14px;
     text-decoration: none;
+		position: relative;
+		&:hover {
+			cursor: pointer;
+			&:after {
+				content: " ";
+				border-bottom-style: solid;
+				border-bottom-width: 2px;
+				width: 100%;
+				left: 0;
+				right: 0;
+				position: absolute;
+				bottom: -5px;
+				margin: 0 auto;
+				display: block;
+				border-bottom-color: #d75a4a;
+			}
+		}
+	}
+}
+.active {
+	font-size:18px;
+	&:after {
+		content: " ";
+		border-bottom-style: solid;
+		border-bottom-width: 2px;
+		width: 100%;
+		left: 0;
+		right: 0;
+		position: absolute;
+		bottom: -5px;
+		margin: 0 auto;
+		display: block;
+		border-bottom-color: #d75a4a;
 	}
 }
 .home-footer {
