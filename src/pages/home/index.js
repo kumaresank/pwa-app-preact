@@ -1,6 +1,5 @@
 import { h, Component } from 'preact'
-import {Button, Tabs} from 'preact-material-components'
-import 'preact-material-components/Tabs/style.css'
+import {Button} from 'preact-material-components'
 import 'preact-material-components/Button/style.css'
 
 import Header from './../../components/header'
@@ -8,27 +7,43 @@ import FoodItem from './../../components/food-item'
 import style from './style'
 import burger from './../../assets/images/burger-medium.png'
 
+import { getFoodGroupData,getFoodItemData } from './../../lib/api'
+
 export default class Home extends Component {
-  render () {
+  state = {groups:[],item:{foodItemList:[]}}
+
+  getFoodData() {
+    getFoodGroupData().then((groups) => {
+      this.setState({ groups });
+      this.getItemData(this.state.groups[0].id);
+    });
+  }
+
+  getItemData(id) {
+    getFoodItemData(id).then((item) => {
+      this.setState({ item });
+    });
+  }
+
+  componentDidMount() {
+    this.getFoodData();
+  }
+
+  render ({}, { groups,item }) {
     return (
       <div>
         <Header title='EASYPIE' fav='true' />
         <div className='home'>
-          <div className='group_img_container'><img className='group_img' src={burger} /></div>
           <div className='tab-container'>
-            <Tabs.TabBarScroller>
-              <Tabs scroller>
-                <Tabs.Tab active>Burgers</Tabs.Tab>
-                <Tabs.Tab>Salad</Tabs.Tab>
-                <Tabs.Tab>Sandwiches</Tabs.Tab>
-                <Tabs.Tab>Signature</Tabs.Tab>
-                <Tabs.Tab>Salad</Tabs.Tab>
-                <Tabs.Tab>Sandwiches</Tabs.Tab>
-                <Tabs.Tab>Signature</Tabs.Tab>
-              </Tabs>
-            </Tabs.TabBarScroller>
+          <ul>
+               { groups.map((group, index) => (
+                <li onClick={() => { this.getItemData(group.id) }}>{group.name}</li>
+                ))}
+          </ul>
           </div>
-          <FoodItem title='Boom Boom Burger (Medium)' desc='House made Meat loaf, Mild Cheddar, Fried Onion Strings' price='2.99' />
+          { item.foodItemList.map((item, index) => (
+          <FoodItem title={item.name} desc='Cottage cheese in a jacket of mash potato, served with lettuce, tomatoes, chopped onions, mayo and crisps' price={item.price[0].price} />
+          ))}
           <div className='home-footer'>
             <Button ripple raised onClick={() => { location.href = '/cart' }}><div align-start>1 Item | $2.99</div><div align-end>View Order</div><div className='clear-fix' /></Button>
           </div>

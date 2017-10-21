@@ -8,7 +8,6 @@ import 'preact-material-components/Button/style.css'
 
 import Header from './../../components/header'
 import Address from './../../components/address'
-import guest from './../../assets/images/guest.svg'
 import add from './../../assets/images/add.svg'
 import visa from './../../assets/images/visa.png'
 import master from './../../assets/images/master.png'
@@ -16,9 +15,23 @@ import discover from './../../assets/images/discover.png'
 import american from './../../assets/images/american.png'
 import style from './style'
 
+import { getAddress } from './../../lib/api'
+import { getProfile } from './../../lib/auth'
+
 export default class Profile extends Component {
-state = { activeTab: 0 }
-  render ({},{activeTab}) {
+state = { activeTab: 0,address:{} }
+
+myProfile() {
+  getAddress().then((address)=>{
+    this.setState({address})
+  })
+}
+
+componentDidMount() {
+  this.myProfile();
+}
+
+  render ({},{activeTab,address}) {
     let body = null
     if (activeTab === 0) {
       body = <div>
@@ -134,11 +147,10 @@ state = { activeTab: 0 }
         <div className='profile'>
           <div className='img_cont'>
             <div className='profile_pic'>
-              <img src={guest} />
+              <img src={getProfile().photo} />
               <img className='add_btn' src={add} />
             </div>
-            <div className='name'>Nitesh Pathak</div>
-            <div className='city'>Braintree, MA</div>
+            <div className='name'>{getProfile().name}</div>
           </div>
           <div className='profile-tab'>
           <Tabs.TabBarScroller>

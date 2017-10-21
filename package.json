@@ -34,8 +34,10 @@
     "sass-loader": "^6.0.6"
   },
   "dependencies": {
+    "axios": "^0.16.2",
     "preact": "^8.2.5",
     "preact-compat": "^3.17.0",
-    "preact-router": "^2.5.7"
+    "preact-router": "^2.5.7",
+    "react-social-login": "^3.2.1"
   }
 }

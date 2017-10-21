@@ -3,23 +3,26 @@
 	min-height: 100%;
 	width: 100%;
 	position: relative;
+	padding-bottom: 60px;
 }
 .group_img {
 	width: 100%;
 }
 .tab-container {
-	margin-top:-5px;
+	margin-top: -12px;
 }
-.mdc-tab-bar-scroller {
-	background: $primary-bg-color;
-}
-.mdc-tab {
-	text-transform: capitalize;
-	font-family: 'Oswald', sans-serif;
-	font-size:15px;
-}
-.mdc-tab--active {
-	font-size:18px;
+ul {
+	overflow: auto;
+	white-space: nowrap;
+	background: #fff;
+	padding: 5px;
+  margin-bottom: 5px;
+	li {
+		display: inline-block;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+	}
 }
 .home-footer {
 	position: fixed;

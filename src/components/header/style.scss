@@ -13,6 +13,11 @@ header{
 	width: 64px;
 	vertical-align: middle;
 }
+.logged_in_user {
+	width: 64px;
+	vertical-align: middle;
+	border-radius: 50%;
+}
 .login_link {
 	text-decoration: none;
 	color:$primary-color;

@@ -1,4 +1,7 @@
 @import '../../style/variable';
+#app {
+	height: 100%;
+}
 .profile {
 	min-height: 100%;
 	width: 100%;
@@ -13,6 +16,10 @@
 .profile_pic {
 	position: relative;
 	display: inline-block;
+	img:first-child {
+		width: 64px;
+		border-radius: 50%;
+	}
 }
 .add_btn {
 	position: absolute;
@@ -22,10 +29,6 @@
 .name {
 	margin-top: 10px;
 	font-size: 1rem;
-}
-.city{
-	font-size: 0.7rem;
-	font-weight: 300;
 }
 .profile-tab {
 	margin-top:3px;
