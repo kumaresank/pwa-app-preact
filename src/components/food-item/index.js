@@ -24,7 +24,7 @@ export default class FoodItem extends Component {
             <div class={style.cart_icons}>
               <Icon>remove_circle_outline</Icon>
               <span>0</span>
-              <Icon onClick={() => { this.customDlg.MDComponent.show() }}>add_circle_outline</Icon>
+              <Icon onClick={() => { this.customDlg.MDComponent.show(); this.rad.MDComponent.checked =true }}>add_circle_outline</Icon>
             </div>
           </div>
         </div>
@@ -35,7 +35,7 @@ export default class FoodItem extends Component {
               <div class={style.sizes}>
                 <h3>Size</h3>
                 {this.props.sizes.map((p, index) => (
-                  <div class={style.sizes_list}><Radio id={p.size} name='size' /><label for={p.size}>{p.size}<span>$ {p.price}</span></label></div>
+                  <div class={style.sizes_list}><Radio id={p.size} ref={r => this.rad = r} name='size' /><label for={p.size}>{p.size}<span>$ {p.price}</span></label></div>
                 ))}
                 <div class={style.clear_fix} />
               </div>
